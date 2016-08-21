@@ -20,12 +20,11 @@ class Order
     @meals.each do |meal|
       total += meal.price
     end
-    puts "The total price of the order is: " + total
+    puts "The total price of the order is: #{total}"
   end
 
   def get_meal(meal_name)
     @meals.each do |meal|
-      byebug
       return meal if meal.name == meal_name
     end
   end
